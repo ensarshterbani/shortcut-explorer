@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Keyboard Shortcut Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-keyboard"></i>
+                    Windows Keyboard Shortcut Explorer
+                </h1>
+                <p class="subtitle">Discover Windows shortcuts or find available key combinations for your custom needs</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Type a key combination (e.g., Ctrl+C) or operation (e.g., copy, lock computer)..."
+                        autocomplete="off"
+                    >
+                    <button id="clearSearch" class="clear-btn" title="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection">
+            <div class="results-container">
+                <div class="welcome-message" id="welcomeMessage">
+                    <div class="welcome-content">
+                        <i class="fas fa-lightbulb"></i>
+                        <h2>Welcome to Windows Keyboard Shortcut Explorer!</h2>
+                        <p>Start typing a key combination in the search bar above, or use the key capture feature to detect shortcuts in real-time.</p>
+                        <div class="quick-tips">
+                            <h3>Quick Tips:</h3>
+                            <ul>
+                                <li>Type combinations like "Ctrl+C" or "Win+L"</li>
+                                <li>Use the key capture button to detect pressed keys</li>
+                                <li>Browse categories below to explore all shortcuts</li>
+                                <li>Available combinations are marked as "Free to use"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="categories-header">
+                <h2>Browse by Category</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="general">General</button>
+                    <button class="filter-btn" data-category="navigation">Navigation</button>
+                    <button class="filter-btn" data-category="system">System</button>
+                    <button class="filter-btn" data-category="file-explorer">File Explorer</button>
+                    <button class="filter-btn" data-category="browser">Browser</button>
+                    <button class="filter-btn" data-category="office">Office</button>
+                </div>
+            </div>
+            
+            <div class="shortcuts-container" id="shortcutsContainer">
+                <!-- Shortcuts will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Windows Keyboard Shortcut Explorer. Built for power users, gamers, and developers.</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-keyboard fa-spin"></i>
+            <p>Loading shortcuts...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
