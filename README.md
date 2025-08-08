@@ -2,6 +2,8 @@
 
 A comprehensive web application that helps users discover Windows keyboard shortcuts and find available key combinations for custom automation.
 
+https://ensarshterbani.github.io/shortcut-explorer/
+
 ## ✨ Features
 
 ### 🔍 **Searchable Shortcut Database**
